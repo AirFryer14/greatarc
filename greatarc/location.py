@@ -21,5 +21,8 @@ class Location:
         
         c = 2 * math.atan2(math.sqrt(a), math.sqrt(1 - a))
         distance = radius * c
+
+        if self.units == "miles":
+            distance *= 0.621371
         
         return distance
